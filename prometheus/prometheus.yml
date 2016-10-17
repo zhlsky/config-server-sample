@@ -1,0 +1,15 @@
+global:  
+  scrape_interval:     15s
+  evaluation_interval: 30s
+  external_labels:
+    monitor: 'config-server-monitor'
+
+scrape_configs:
+
+  - job_name: 'scrape-config-server'
+
+    scrape_interval: 5s
+    metrics_path: '/prometheus'
+
+    static_configs:
+     - targets: ['127.0.0.1:9006']
