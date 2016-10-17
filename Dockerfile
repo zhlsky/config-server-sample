@@ -15,8 +15,8 @@ ADD pom.xml /opt/
 ADD src/ /opt/src/  
   
 WORKDIR /opt/  
-  
-RUN mvn package  
+
+RUN mvn clean package  
   
 EXPOSE  9006  
 
